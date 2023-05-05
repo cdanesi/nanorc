@@ -1,0 +1,29 @@
+# todo.nanorc - a nanorc for todo.txt
+
+syntax "todo.txt" "todo\.txt|done\.txt|report\.txt|archive\.txt"
+
+# tasks
+icolor brightwhite ".*"
+icolor magenta "^x"
+
+# priorities
+icolor brightblack "\([sS-zZ]\).*$"
+icolor normal "\([lL-rR]\).*$"
+icolor brightwhite "\([eE-kK]\).*$"
+icolor brightmagenta "\([dD]\).*$"
+icolor brightyellow "\([cC]\).*$"
+icolor brightcyan "\([bB]\).*$"
+icolor brightgreen "\([aA]\).*$"
+
+# contexts
+icolor brightwhite,blue "\@.\S+"
+
+# projects
+icolor brightwhite,cyan "\+\S+"
+
+# completion date
+icolor cyan "[0-9][0-9][0-9][0-9]-\S+"
+icolor brightcyan "(T)[0-9][0-9]\:\S+"
+
+# due date
+icolor red "(pri:|due:)\S+"
