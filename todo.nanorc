@@ -4,12 +4,13 @@ syntax "todo.txt" "todo\.txt|done\.txt|report\.txt|archive\.txt"
 
 # tasks
 icolor brightwhite ".*"
-icolor magenta "^x"
+icolor brightblack "^x.*$"
 
 # priorities
-icolor brightblack "\([sS-zZ]\).*$"
-icolor normal "\([lL-rR]\).*$"
-icolor brightwhite "\([eE-kK]\).*$"
+icolor brightblack "\([tT-zZ]\).*$"
+icolor normal "\([mM-sS]\).*$"
+icolor brightwhite "\([fF-lL]\).*$"
+icolor cyan "\([eE]\).*$"
 icolor brightmagenta "\([dD]\).*$"
 icolor brightyellow "\([cC]\).*$"
 icolor brightcyan "\([bB]\).*$"
